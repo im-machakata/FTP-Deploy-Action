@@ -4,8 +4,8 @@
 
 Automate deploying websites and more with this GitHub action. **It's free!**
 
-![FTP test](https://github.com/SamKirkland/FTP-Deploy-Action/workflows/FTP%20Test/badge.svg)
-![FTPS test](https://github.com/SamKirkland/FTP-Deploy-Action/workflows/FTPS%20Test/badge.svg)
+![FTP test](https://github.com/im-machakata/FTP-Deploy-Action/workflows/FTP%20Test/badge.svg)
+![FTPS test](https://github.com/im-machakata/FTP-Deploy-Action/workflows/FTPS%20Test/badge.svg)
 
 ---
 
@@ -23,9 +23,9 @@ jobs:
       uses: actions/checkout@v3
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: im-machakata/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.im-machakata.com
         username: myFtpUserName
         password: ${{ secrets.ftp_password }}
 ```
@@ -33,7 +33,7 @@ jobs:
 ---
 
 ### Requirements
-- You must have ftp access to your server. If your host allows or requires ssh please use my [web-deploy](https://github.com/SamKirkland/web-deploy) action
+- You must have ftp access to your server. If your host allows or requires ssh please use my [web-deploy](https://github.com/im-machakata/web-deploy) action
 - Some web hosts change the default port (21), check with your host for your port number
 
 ---
@@ -57,8 +57,8 @@ I strongly recommend you store your `password` as a secret.
 
 | Key Name                | Required | Example                       | Default Value                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------------------|----------|-------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `server`                | Yes      | `ftp.samkirkland.com`         |                               | Deployment destination server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `username`              | Yes      | `username@samkirkland.com`    |                               | FTP user name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `server`                | Yes      | `ftp.im-machakata.com`         |                               | Deployment destination server                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `username`              | Yes      | `username@im-machakata.com`    |                               | FTP user name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `password`              | Yes      | `CrazyUniquePassword&%123`    |                               | FTP password, be sure to escape quotes and spaces                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `port`                  | No       | `990`                         | `21`                          | Server port to connect to (read your web hosts docs)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `protocol`              | No       | `ftps`                        | `ftp`                         | `ftp`: provides no encryption, `ftps`: full encryption newest standard (aka "explicit" ftps), `ftps-legacy`: full encryption legacy standard (aka "implicit" ftps)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -99,9 +99,9 @@ jobs:
         npm run build
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: im-machakata/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.im-machakata.com
         username: myFtpUserName
         password: ${{ secrets.password }}
 ```
@@ -119,9 +119,9 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: im-machakata/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.im-machakata.com
         username: myFtpUserName
         password: ${{ secrets.password }}
         protocol: ftps
@@ -142,9 +142,9 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: im-machakata/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.im-machakata.com
         username: myFtpUserName
         password: ${{ secrets.password }}
         dry-run: true
@@ -164,9 +164,9 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: im-machakata/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.im-machakata.com
         username: myFtpUserName
         password: ${{ secrets.password }}
         exclude: |
@@ -188,7 +188,7 @@ if you overwrite the default value you will probably want to respecify them
 
 ---
 
-_Want another example? Let me know by creating a [github issue](https://github.com/SamKirkland/FTP-Deploy-Action/issues/new)_
+_Want another example? Let me know by creating a [github issue](https://github.com/im-machakata/FTP-Deploy-Action/issues/new)_
 
 ---
 
@@ -196,42 +196,42 @@ _Want another example? Let me know by creating a [github issue](https://github.c
 
 If you appreciate this github action give it a :star: or show off with one of the badges below. Feel free to edit the text or color.
 
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
 ---
 
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=297FA9">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/im-machakata/FTP-Deploy-Action)
 
 ```md
-[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Website Deployed for Free with FTP Deploy Action" src="https://img.shields.io/badge/Website deployed for free with-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=d00000">](https://github.com/im-machakata/FTP-Deploy-Action)
 ```
 
 ---
@@ -275,12 +275,12 @@ jobs:
 </details>
 
 ## Debugging your config locally
-This action is a basic wrapper around my `@samkirkland/ftp-deploy` npm package. To test your config you can install [@samkirkland/ftp-deploy](https://github.com/SamKirkland/ftp-deploy) and then convert your config to a yml action. Settings are one-to-one, this action is only a wrapper.
+This action is a basic wrapper around my `@im-machakata/ftp-deploy` npm package. To test your config you can install [@im-machakata/ftp-deploy](https://github.com/im-machakata/ftp-deploy) and then convert your config to a yml action. Settings are one-to-one, this action is only a wrapper.
 
 ## Contributing to this project
 To test this action locally you will need to setup **docker** and **act** to run a environment similar to the one github uses for actions.
 - Download/install docker for windows, make sure it is running
 - `choco install act-cli` install [act](https://github.com/nektos/act)
-- Install the npm package using `npm install --dev-only @samkirkland/ftp-deploy`
+- Install the npm package using `npm install --dev-only @im-machakata/ftp-deploy`
 - Update the `deploy` script in `package.json` with a actual server/username/password
 - You can run the script using the following command `npm run deploy` (run this in the folder that has the `package.json` file)
